@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "2b37a42b-81f3-4a09-9b7e-4922859ef819",
+		"name": "Examen Practico 3P",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17260373"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Listar todas las tasas de interes",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Crear tasa de interes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"INT 1\",\r\n    \"interestRate\":15.0,\r\n    \"state\":\"ACT\",\r\n    \"start\":\"2023-12-05\",\r\n    \"end\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/interestrates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"interestrates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear product account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"'Cuenta Corriente 2023\",\r\n    \"description\":\"Cuenta corriente completamente autoegestionada y digital; no maneja cheques ni paga interes.\",\r\n    \"minimunBalance\":0.0,\r\n    \"payInterest\":\"Y\",\r\n    \"acceptsChecks\":\"N\",\r\n    \"state\":\"ACT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/productsaccounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"productsaccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener product account por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/productsaccounts/0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"productsaccounts",
+								"0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Branches",
+			"item": [
+				{
+					"name": "listar todas",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "crear branch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/interestrates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"interestrates"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
